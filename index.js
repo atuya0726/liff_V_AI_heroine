@@ -10,7 +10,7 @@ window.addEventListener('load', function(){
         if (!liff.isInClient() && !liff.isLoggedIn()) {
             liff.login({ redirectUri: location.href });
         }
-        lineIdToken = liff.getProfile();
+        profile = liff.getProfile();
         console.log(prifile)
         })
         .catch((err) => {
