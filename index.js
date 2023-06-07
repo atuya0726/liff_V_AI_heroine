@@ -11,7 +11,6 @@ window.addEventListener('load', function(){
             liff.login({ redirectUri: location.href });
         }
         console.log("aaaaa")
-        profile = liff.getProfile()
         })
         .catch((err) => {
           console.log('LIFFアプリの初期化に失敗しました', err);
