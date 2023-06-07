@@ -1,5 +1,5 @@
 liff.init({
-    liffId: import.meta.env.LIFF_ID,
+    liffId: "1661342381-JVVYVXww",
   }).then(() => {
     // ログインしていない
     if (!liff.isLoggedIn()) {
