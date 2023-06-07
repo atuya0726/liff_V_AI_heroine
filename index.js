@@ -11,6 +11,7 @@ window.addEventListener('load', function(){
             liff.login({ redirectUri: location.href });
         }
         lineIdToken = liff.getIDToken();
+        console.log(lineIdToken)
         })
         .catch((err) => {
           console.log('LIFFアプリの初期化に失敗しました', err);
