@@ -16,10 +16,7 @@ window.addEventListener('load', function(){
         });
 
     liff.ready.then(() =>{
-        return liff.getProfile()
-        .then(profile => {
-          window.open(`https://buy.stripe.com/test_xxxxx?client_reference_id=${profile.userId}`)
-        })
+        liff.openWindow({url:"buy.stripe.com/test_7sIeXt7dA0LL8Pm7st"})
     })
 
 
