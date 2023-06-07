@@ -7,7 +7,7 @@ window.addEventListener('load', function(){
         console.log('seccess')
           // ログインしていない
         if (!liff.isInClient() && !liff.isLoggedIn()) {
-            liff.login();
+            liff.login({ redirectUri: location.href });
         }
     
         return liff.getProfile()
