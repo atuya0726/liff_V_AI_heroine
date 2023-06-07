@@ -18,11 +18,7 @@ liff.init({
     liffId: "1661342381-JVVYVXww"
   })
     .then(() => {
-      if (!liff.isInClient() && !liff.isLoggedIn()) {
-        window.alert("LINEアカウントにログインしてください。");
-        liff.login({ redirectUri: location.href });
-      }
-      lineIdToken = liff.getIDToken();
+      console.log('seccess')
     })
     .catch((err) => {
       console.log('LIFFアプリの初期化に失敗しました', err);
