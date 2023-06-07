@@ -16,7 +16,7 @@ window.addEventListener('load', function(){
         });
 
     liff.ready.then(() =>{
-        liff.openWindow({url:"buy.stripe.com/test_7sIeXt7dA0LL8Pm7st"})
+        liff.openWindow({url:"https://buy.stripe.com/test_7sIeXt7dA0LL8Pm7st"})
     })
 
 
