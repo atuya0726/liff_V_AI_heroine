@@ -10,7 +10,7 @@ window.addEventListener('load', function(){
             liff.login({ redirectUri: location.href });
         }
         console.log("aaaaa")
-        return liff.getProfile()
+        liff.getProfile()
             .then(profile => {
                 console.log("ccccc")
                 window.open(`https://buy.stripe.com/test_7sIeXt7dA0LL8Pm7st?client_reference_id=${profile.userId}`)
