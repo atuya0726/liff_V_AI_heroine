@@ -6,8 +6,8 @@ window.addEventListener('load', function(){
       }).then(() => {
         console.log('seccess')
           // ログインしていない
-        if (!liff.isLoggedIn()) {
-            return liff.login()
+        if (!liff.isInClient() && !liff.isLoggedIn()) {
+            liff.login();
         }
     
         return liff.getProfile()
