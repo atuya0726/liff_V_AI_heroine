@@ -16,6 +16,13 @@ window.addEventListener('load', function(){
           console.log('LIFFアプリの初期化に失敗しました', err);
         });
 
+    liff.ready(() =>{
+        return liff.getProfile()
+        .then(profile => {
+          window.open(`https://buy.stripe.com/test_xxxxx?client_reference_id=${profile.userId}`)
+        })
+    })
+
 
 })
 
