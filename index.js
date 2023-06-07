@@ -7,12 +7,12 @@ window.addEventListener('load', function(){
         console.log('seccess')
           // ログインしていない
         if (!liff.isInClient() && !liff.isLoggedIn()) {
-            liff.login({ redirectUri: location.href });
+            liff.login();
         }
     
         return liff.getProfile()
             .then(profile => {
-                window.open(`https://buy.stripe.com/test_7sIeXt7dA0LL8Pm7st?client_reference_id=${profile.userId}`)
+                window.open(`https://peppy-lebkuchen-626179.netlify.app/redirect.html`)
             })
         })
         .catch((err) => {
@@ -22,4 +22,4 @@ window.addEventListener('load', function(){
 
 })
 
-  
+// https://buy.stripe.com/test_7sIeXt7dA0LL8Pm7st?client_reference_id=${profile.userId}
