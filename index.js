@@ -9,9 +9,10 @@ window.addEventListener('load', function(){
         if (!liff.isInClient() && !liff.isLoggedIn()) {
             liff.login();
         }
-    
+        console.log("aaaaa")
         return liff.getProfile()
             .then(profile => {
+                console.log("ccccc")
                 window.open(`https://buy.stripe.com/test_7sIeXt7dA0LL8Pm7st?client_reference_id=${profile.userId}`)
             })
         })
