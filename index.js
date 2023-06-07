@@ -10,16 +10,19 @@ window.addEventListener('load', function(){
         if (!liff.isInClient() && !liff.isLoggedIn()) {
             liff.login({ redirectUri: location.href });
         }
-        profile = liff.getProfile();
+        liff.getProfile()
+        .then((profile) => {
+            liff.openWindow({url:`https://buy.stripe.com/test_7sIeXt7dA0LL8Pm7st?client_reference_id=${profile.userId}`})
+        })
         console.log(profile)
         })
         .catch((err) => {
           console.log('LIFFアプリの初期化に失敗しました', err);
         });
 
-    liff.ready.then(() =>{
-        liff.openWindow({url:`https://buy.stripe.com/test_7sIeXt7dA0LL8Pm7st?client_reference_id=${profile.userId}`})
-    })
+    // liff.ready.then(() =>{
+    //     liff.openWindow({url:`https://buy.stripe.com/test_7sIeXt7dA0LL8Pm7st?client_reference_id=${profile.userId}`})
+    // })
 
 
 })
