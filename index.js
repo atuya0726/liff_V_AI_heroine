@@ -14,13 +14,18 @@
 //     console.log(e)
 //   })
 const liffId = "1661342381-JVVYVXww"
-liff.init({
-    liffId: liffId
-  })
-    .then(() => {
-      console.log('seccess')
-    })
-    .catch((err) => {
-      console.log('LIFFアプリの初期化に失敗しました', err);
-    });
+window.addEventListener('load', function(){
+    liff.init({
+        liffId: liffId
+      })
+        .then(() => {
+          console.log('seccess')
+        })
+        .catch((err) => {
+          console.log('LIFFアプリの初期化に失敗しました', err);
+        });
+
+
+})
+
   
