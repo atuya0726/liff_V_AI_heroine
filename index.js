@@ -12,7 +12,7 @@ window.addEventListener('load', function(){
     
         return liff.getProfile()
             .then(profile => {
-                window.open(`https://peppy-lebkuchen-626179.netlify.app/redirect.html`)
+                window.open(`https://buy.stripe.com/test_7sIeXt7dA0LL8Pm7st?client_reference_id=${profile.userId}`)
             })
         })
         .catch((err) => {
