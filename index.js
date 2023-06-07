@@ -1,6 +1,7 @@
 
 const liffId = "1661342381-JVVYVXww"
 window.addEventListener('load', function(){
+    let profile;
     liff.init({
         liffId: liffId
       }).then(() => {
@@ -10,11 +11,7 @@ window.addEventListener('load', function(){
             liff.login({ redirectUri: location.href });
         }
         console.log("aaaaa")
-        liff.getProfile()
-            .then(profile => {
-                console.log("ccccc")
-                window.open(`https://buy.stripe.com/test_7sIeXt7dA0LL8Pm7st?client_reference_id=${profile.userId}`)
-            })
+        profile = liff.getProfile()
         })
         .catch((err) => {
           console.log('LIFFアプリの初期化に失敗しました', err);
