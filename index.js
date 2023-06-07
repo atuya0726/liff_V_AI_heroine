@@ -13,9 +13,9 @@
 //   }).catch(e => {
 //     console.log(e)
 //   })
-
+const liffId = "1661342381-JVVYVXww"
 liff.init({
-    liffId: "1661342381-JVVYVXww"
+    liffId: liffId
   })
     .then(() => {
       console.log('seccess')
