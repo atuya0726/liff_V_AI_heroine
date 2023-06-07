@@ -18,7 +18,7 @@ window.addEventListener('load', function(){
         });
 
     liff.ready.then(() =>{
-        liff.openWindow({url:"https://buy.stripe.com/test_7sIeXt7dA0LL8Pm7st?client_reference_id=${lineIdToken}"})
+        liff.openWindow({url:`https://buy.stripe.com/test_7sIeXt7dA0LL8Pm7st?client_reference_id=${lineIdToken}`})
     })
 
 
